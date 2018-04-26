@@ -10,14 +10,13 @@ class MapLj extends Component {
         map.enableScrollWheelZoom(true);
         window.cityCode=this.cityCode;
         const myGeo = new BMap.Geocoder();
-        // alert("city"+this.city);
         fetch('http://localhost:1080/api/map?city='+this.city+'&cityCode='+this.cityCode)
             .then((response) => {
                 // console.log(response);
                 response.json().then(function(data){
                     // console.log(data);
-                    if(!data){
-                        alert("该城市还未爬取数据");
+                    if(!data||data.length==0){
+                        alert("该城市还未爬取数据，请点击抓一下");
                         return
                     }
 
