@@ -15,3 +15,8 @@ yarn run server
 运行前端
  
  yarn start
+
+
+## 截图
+
+![](https://github.com/lry19911991/nodejs_loupan_spider/blob/master/imga.png)
