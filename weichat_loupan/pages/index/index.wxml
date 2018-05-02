@@ -1,0 +1,54 @@
+<view class="wrap">
+  <form bindsubmit="query">
+    <view class="label">选择城市</view>
+<view class="city" bindtap="clickPerson">
+  <view class="city_name">{{firstPerson}}</view>
+    </view>
+ 
+<view class="city_box">
+   <view class="city_select" hidden="{{selectPerson}}">
+
+
+    <view class="select_one" bindtap="mySelect" data-me="sh" data-name='上海'>上海</view>
+    <view class="select_one" bindtap="mySelect" data-me="bj" data-name='北京'>北京</view>
+    <view class="select_one" bindtap="mySelect" data-me="sz" data-name='深圳'>深圳</view>
+    <view class="select_one" bindtap="mySelect" data-me="xm" data-name='厦门'>厦门</view>
+    <view class="select_one" bindtap="mySelect" data-me="fz" data-name='福州'>福州</view>
+    <view class="select_one" bindtap="mySelect" data-me="nj" data-name='南京'>南京</view>
+
+    <view class="select_one" bindtap="mySelect" data-me="np" data-name='南平'>南平</view>
+    <view class="select_one" bindtap="mySelect" data-me="tj"  data-name='天津'>天津</view>
+    <view class="select_one" bindtap="mySelect" data-me="hz" data-name='杭州'>杭州</view>
+
+    <view class="select_one" bindtap="mySelect" data-me="hf" data-name='合肥'>合肥</view>
+    <view class="select_one" bindtap="mySelect" data-me="cq" data-name='重庆'>重庆</view>
+    <view class="select_one" bindtap="mySelect" data-me="cd" data-name='成都'>成都</view>
+                
+
+    <view class="select_one" bindtap="mySelect" data-me="cs" data-name='长沙'>长沙</view>
+    <view class="select_one" bindtap="mySelect" data-me="jn" data-name='济南'>济南</view>
+    <view class="select_one" bindtap="mySelect" data-me="zzcd" data-name='郑州'>郑州</view>
+       
+
+    <view class="select_one" bindtap="mySelect" data-me="sz" data-name='南平'>苏州</view>
+    <view class="select_one" bindtap="mySelect" data-me="nc" data-name='南平'>南昌</view>
+    <view class="select_one" bindtap="mySelect" data-me="hhht" data-name='南平'>呼和浩特</view>
+             
+
+    <view class="select_one" bindtap="mySelect" data-me="sz" data-name='扬州'>扬州</view>
+    <view class="select_one" bindtap="mySelect" data-me="nc" data-name='宁波'>宁波</view>
+    <view class="select_one" bindtap="mySelect" data-me="hhht" data-name='泉州'>泉州</view>
+        
+
+  </view>
+ </view>
+
+    <button formType="submit" class="button {{submit ? 'disabled' : ''}}">{{submit ? '正在抓取...' : '抓一下'}}</button>
+  </form>
+
+  <view class="website" bindtap="copyUrl">
+  </view>
+</view>
+
+<map longitude="{{longitude}}" scale="{{scale}}"  latitude="{{latitude}}" markers="{{markers}}" bindmarkertap="markertap" covers="{{covers}}" style="width: 100%; height: 300px;margin-top:30px"></map>
+
